@@ -1,0 +1,44 @@
+# Checkout Funnel A and B Testing Project
+
+This project looks at three common problems people run into when they try to buy something online, and checks if fixing them actually leads to more people finishing their purchase, using real statistics instead of guessing.
+
+## What this project does
+
+I picked three checkout problems that show up again and again in real online stores, and ran an A and B test on each one.
+
+1. **Clear messaging vs unclear messaging** (real data). Does showing users clear and complete information lead to more conversions compared to a plain, uninformative screen. This test uses a real public dataset from Kaggle with over half a million rows.
+2. **Guest checkout vs forced signup** (simulated data). Does letting people check out without forcing them to make an account lead to more completed purchases.
+3. **Short checkout form vs long checkout form** (simulated data). Does a shorter form with fewer fields lead to more completed purchases compared to a long form.
+
+Test 1 uses real user data. Test 2 and test 3 use simulated data, since companies do not publish this kind of internal experiment publicly. The completion rates used for the simulation are grounded in real published checkout research, not random guesses. All sources are listed inside the notebook.
+
+## Method
+
+Every test in this project uses a chi square test, since the outcome in each case is a yes or no answer, meaning did the person convert or complete checkout, or not. A chi square test is the correct choice for comparing two groups on a yes or no outcome. For each test I set up a clear hypothesis, defined the two groups, picked one metric to measure, ran the test, and wrote out a plain recommendation at the end, either ship the change or run it longer.
+
+## Results
+
+| Test | Groups compared | Result | Recommendation |
+|------|------------------|--------|-----------------|
+| Test 1 (real data) | plain screen vs clear messaging | statistically significant | ship the change |
+| Test 2 (simulated) | forced signup vs guest checkout | statistically significant | ship the change |
+| Test 3 (simulated) | long form vs short form | statistically significant | ship the change |
+
+All three tests point in the same direction, a clearer, more flexible, and shorter checkout process leads to more people actually finishing their purchase.
+
+## Tools used
+
+Python, pandas, scipy, matplotlib, inside a Jupyter notebook.
+
+## Files in this repo
+
+- **Checkout_Funnel_AB_Testing.ipynb** — the full notebook, with all the code, explanations, charts, and results
+- **marketing_AB.csv** — the real dataset used for test 1
+- **test1_chart.png** — a saved chart from test 1
+
+## About me
+
+I am a graduate student at Northeastern University's Khoury College of Computer Science. I built this project to carry out A and B testing on some common issues faced by customers during the checkout process. I picked this topic because I have personally run into most of these problems myself while shopping online, and I wanted to see if there was real data behind why these small changes actually matter.
+
+GitHub: github.com/mohanaHarshita4
+LinkedIn: linkedin.com/in/mohana-harshita
