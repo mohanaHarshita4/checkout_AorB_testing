@@ -41,4 +41,5 @@ Python, pandas, scipy, matplotlib, inside a Jupyter notebook.
 I am a graduate student at Northeastern University's Khoury College of Computer Science. I built this project to carry out A and B testing on some common issues faced by customers during the checkout process. I picked this topic because I have personally run into most of these problems myself while shopping online, and I wanted to see if there was real data behind why these small changes actually matter.
 
 GitHub: github.com/mohanaHarshita4
+
 LinkedIn: linkedin.com/in/mohana-harshita
